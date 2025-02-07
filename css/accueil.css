@@ -1,0 +1,227 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #FF79DA;
+    --filter-bg-color: #99E2D0;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+/* Header */
+
+.title {
+    font-family: 'Shrikhand', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+header {
+    background-color: #fff;
+    padding: 0.3rem;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.city-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19;
+    background-color: #EAEAEA;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.city-info p {
+    font-weight: bold;
+    color: #353535;
+    font-size: 16px;
+}
+
+.city-info i {
+    color: #353535;
+    justify-content: space-between;
+    margin-right: 16px;
+}
+
+
+/* Section reservation */
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.reservation h2 {
+    font-size: 24px;
+}
+
+.reservation p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.reservation button {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 4px 2px 8px black;
+    font-size: 16px;
+    margin-bottom: 50px;
+
+}
+
+/* Section fonctionnement */
+
+.fonctionnement {
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.fontionnement h2 {
+    text-align: left;
+    font-size: 18px;
+
+}
+
+.fonctionnement button {
+    background-color: #F6F6F6;
+    color: #000000;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0px 2px 15px rgb(210, 210, 210);
+    font-size: 16px;
+    margin-bottom: 50px;
+    padding: 25px 50px;
+}
+
+.fonctionnement-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fonctionnement-button i {
+    color: grey;
+    margin-right: 20px;
+    font-size: 19px;
+
+}
+
+.fonctionnement-button .fa-store {
+    color: #9356DC;
+}
+
+/* Section cartes restaurant */
+
+
+.card {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.card .content {
+    margin-left: 15px;
+}
+
+.top-card {
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    background: #99E2D0;
+    color: #008766;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 2px;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+
+}
+
+.title-card {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.like-icon {
+    display: flex;
+    padding: 10px;
+    margin-right: 35px;
+    font-size: 40px;
+}
+
+.footer-card {
+    display: flex;
+    flex-direction: right;
+    justify-content: space-between;
+}
+
+.cards {
+    padding-bottom: 50px;
+}
+
+
+/* Section footer */
+
+footer {
+    background-color: #353535;
+    padding: 20px;
+}
+
+.footer-column h1 {
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column p {
+    color: white;
+    margin-right: 20px;
+    margin: 0;
+
+}
