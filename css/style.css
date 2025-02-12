@@ -8,10 +8,6 @@
     --filter-bg-color: #99E2D0;
 }
 
-.fa-solid {
-    color: var(--main-color);
-}
-
 body {
     background-color: rgb(247, 247, 247);
     justify-content: center;
@@ -23,6 +19,12 @@ body {
 
 
 /* Header */
+header {
+    background-color: #fff;
+    padding: 0.3rem;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
 
 .title {
     font-family: 'Shrikhand', sans-serif;
@@ -31,12 +33,6 @@ body {
     font-size: 30px;
 }
 
-header {
-    background-color: #fff;
-    padding: 0.3rem;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
-    margin: 0;
-}
 
 .city-info {
     display: flex;
@@ -62,11 +58,13 @@ header {
 
 
 /* Section reservation */
+
 .reservation {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 30px;
 }
 
 .reservation h2 {
@@ -96,27 +94,12 @@ header {
 
 .fonctionnement {
     background-color: #fff;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 .fontionnement h2 {
     text-align: left;
     font-size: 18px;
-
-}
-
-.fonctionnement button {
-    background-color: #F6F6F6;
-    color: #000000;
-    border: none;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
-    box-shadow: 0px 2px 15px rgb(210, 210, 210);
-    font-size: 16px;
-    margin-bottom: 50px;
-    padding: 25px 50px;
 }
 
 .fonctionnement-button {
@@ -125,6 +108,33 @@ header {
     align-items: center;
     flex-direction: column;
 }
+
+.fonctionnement li {
+    background-color: #F6F6F6;
+    color: #000000;
+    border: none;
+    padding: 1rem;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 2px 15px rgb(210, 210, 210);
+    font-size: 16px;
+    margin-bottom: 50px;
+    padding: 25px 50px;
+    list-style: none;
+}
+
+.fonctionnement span {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    left: -4rem;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    background-color: var(--main-color);
+    padding: 0.3rem 0.6rem;
+}
+
+
 
 .fonctionnement-button i {
     color: grey;
@@ -139,9 +149,26 @@ header {
 
 /* Section cartes restaurant */
 
+.restaurants {
+    padding: 0 30px 50px 30px;
+    margin-top: 70px;
+}
 
-.card {
-    width: 350px;
+.restaurants h2 {
+    font-size: 26px;
+}
+
+.restaurant-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.restaurant-cards article {
+    width: 100%;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -149,22 +176,18 @@ header {
     margin-bottom: 20px;
 }
 
-.card img {
+.restaurant-cards .top-card {
+    position: relative;
+}
+
+.restaurant-cards article img {
     width: 100%;
     height: auto;
     max-height: 180px;
     object-fit: cover;
 }
 
-.card .content {
-    margin-left: 15px;
-}
-
-.top-card {
-    position: relative;
-}
-
-.tag {
+.restaurant-cards .tag {
     position: absolute;
     background: #99E2D0;
     color: #008766;
@@ -177,51 +200,78 @@ header {
 
 }
 
-.title-card {
-    font-size: 18px;
-    font-weight: bold;
+.restaurant-cards .footer-card {
+    display: flex;
+    flex-direction: right;
+    justify-content: space-between;
 }
 
-.like-icon {
+.restaurant-cards .content {
+    margin-left: 15px;
+}
+
+
+.restaurant-cards .title-card {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.restaurant-cards .sub-title {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.restaurant-cards .like-icon {
     display: flex;
     padding: 10px;
     margin-right: 35px;
     font-size: 40px;
 }
 
-.footer-card {
-    display: flex;
-    flex-direction: right;
-    justify-content: space-between;
-}
-
-.cards {
-    padding-bottom: 50px;
+.restaurant-cards .fa-heart {
+    font-size: 30px;
 }
 
 
 /* Section footer */
 
-footer {
+.footer {
     background-color: #353535;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-column h1 {
     font-family: 'Shrikhand', sans-serif;
     font-size: 18px;
     color: #fff;
+    margin-bottom: 15px;
 }
 
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer-column p {
-    color: white;
-    margin-right: 20px;
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
+}
 
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column i {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 16px;
 }
