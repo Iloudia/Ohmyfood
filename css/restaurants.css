@@ -47,6 +47,28 @@ header {
     font-size: 30px;
 }
 
+.restaurant-header .like-icon{
+    display: flex;
+    padding: 10px;
+    margin-right: 35px;
+    font-size: 40px;
+  }
+  .restaurant-header .like-icon .fa-heart {
+    font-size: 30px;
+    position: absolute;
+  }
+  .restaurant-header .like-icon .fa-solid {
+    opacity: 0;
+    color: transparent;
+    background-image: linear-gradient(to top, var(--main-color), var(--main-bg-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .restaurant-header .like-icon .fa-solid:hover {
+    opacity: 1;
+  }
+
 .restaurant-image {
     max-width: 100%;
     height: auto;

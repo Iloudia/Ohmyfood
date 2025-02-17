@@ -17,3 +17,25 @@ filter: brightness(1.1);
 background-color: rgba(147, 86, 220, 0.1);
 
 }
+
+.restaurant-cards article .footer-card .like-icon {
+    display: flex;
+    padding: 10px;
+    margin-right: 35px;
+    font-size: 40px;
+  }
+  .restaurant-cards article .footer-card .like-icon .fa-heart {
+    font-size: 30px;
+    position: absolute;
+  }
+  .restaurant-cards article .footer-card .like-icon .fa-solid {
+    opacity: 0;
+    color: transparent;
+    background-image: linear-gradient(to top, var(--main-color), var(--main-bg-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .restaurant-cards article .footer-card .like-icon .fa-solid:hover {
+    opacity: 1;
+  }

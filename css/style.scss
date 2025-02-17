@@ -242,6 +242,19 @@ header {
 
                 .fa-heart {
                     font-size: 30px;
+                    position: absolute;
+                }
+
+                .fa-solid {
+                    opacity: 0;
+                    color: transparent;
+                    background-image: linear-gradient(to top, var(--main-color), var(--main-bg-color));
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    transition: opacity 0.5s ease-in-out;
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
             }
         }

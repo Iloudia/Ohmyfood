@@ -1,0 +1,264 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --main-color: #9356DC;
+  --main-bg-color: #FF79DA;
+  --filter-bg-color: #99E2D0;
+}
+
+body {
+  background-color: rgb(247, 247, 247);
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 0.3rem;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.title {
+  font-family: "Shrikhand", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.city-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19;
+  background-color: #EAEAEA;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.city-info p {
+  font-weight: bold;
+  color: #353535;
+  font-size: 16px;
+}
+.city-info i {
+  color: #353535;
+  justify-content: space-between;
+  margin-right: 16px;
+}
+
+/* Section reservation */
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.reservation h2 {
+  font-size: 24px;
+}
+.reservation p {
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+.reservation button {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 4px 2px 8px black;
+  font-size: 16px;
+  margin-bottom: 50px;
+  transition: var(--filter-bg-color) 0.3s ease;
+}
+.reservation button:hover {
+  filter: brightness(1.1);
+  background-color: rgba(147, 86, 220, 0.1);
+}
+
+/* Section fonctionnement */
+.fonctionnement {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.fontionnement h2 {
+  text-align: left;
+  font-size: 18px;
+}
+
+.fonctionnement-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fonctionnement li {
+  background-color: #F6F6F6;
+  color: #000000;
+  border: none;
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 2px 15px rgb(210, 210, 210);
+  font-size: 16px;
+  margin-bottom: 50px;
+  padding: 25px 50px;
+  list-style: none;
+}
+
+.fonctionnement span {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  left: -4rem;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  background-color: var(--main-color);
+  padding: 0.3rem 0.6rem;
+}
+
+.fonctionnement-list i {
+  color: grey;
+  margin-right: 20px;
+  font-size: 19px;
+}
+
+.fonctionnement-list .fa-store {
+  color: #9356DC;
+}
+
+/* Section cartes restaurant */
+.restaurants {
+  padding: 0 30px 50px 30px;
+  margin-top: 70px;
+}
+
+.restaurants h2 {
+  font-size: 26px;
+}
+
+.restaurant-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.restaurant-cards a {
+  text-decoration: none;
+  width: 100%;
+  color: inherit;
+}
+.restaurant-cards article {
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.restaurant-cards article .top-card {
+  position: relative;
+}
+.restaurant-cards article .top-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurant-cards article .top-card .tag {
+  position: absolute;
+  background: #99E2D0;
+  color: #008766;
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 2px;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+}
+.restaurant-cards article .footer-card {
+  display: flex;
+  flex-direction: right;
+  justify-content: space-between;
+}
+.restaurant-cards article .footer-card .content {
+  margin-left: 15px;
+}
+.restaurant-cards article .footer-card .content .title-card {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.restaurant-cards article .footer-card .content .sub-title {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 300;
+}
+.restaurant-cards article .footer-card .like-icon {
+  display: flex;
+  padding: 10px;
+  margin-right: 35px;
+  font-size: 40px;
+}
+.restaurant-cards article .footer-card .like-icon .fa-heart {
+  font-size: 30px;
+  position: absolute;
+}
+.restaurant-cards article .footer-card .like-icon .fa-solid {
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(to top, var(--main-color), var(--main-bg-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: opacity 0.5s ease-in-out;
+}
+.restaurant-cards article .footer-card .like-icon .fa-solid:hover {
+  opacity: 1;
+}
+
+/* Section footer */
+.footer {
+  background-color: #353535;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-column h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.footer .footer-column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-column li {
+  margin-bottom: 8px;
+}
+.footer .footer-column a {
+  color: white;
+  text-decoration: none;
+}
+.footer .footer-column:hover {
+  text-decoration: underline;
+}
+.footer .footer-column i {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */
