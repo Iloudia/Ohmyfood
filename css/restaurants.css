@@ -117,7 +117,7 @@ header {
     background-color: #99E2D0;
 }
 
-.menu-items {
+.menu-box {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -136,6 +136,7 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: 0px 2px 15px rgb(210, 210, 210);
+    
 }
 
 
@@ -160,11 +161,40 @@ header {
     font-size: 15px;
 }
 
+.menu-item-text .check {
+    width: 30px;
+    height: 30px;
+    background-color: var(--filter-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item-text .check i {
+    color: white;
+}
+
+.menu-item-text:hover .check {
+    width: 50px;
+    
+
+}
+
 .menu-item-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
+
+.price-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid red;
+}
+
+
 .order-button {
     display: flex;
     align-items: center;
@@ -228,4 +258,9 @@ header {
 color: #fff;
 margin-right: 10px;
 font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    
+
 }

@@ -261,4 +261,81 @@ header {
   margin-right: 10px;
   font-size: 16px;
 }
+
+@media screen and (min-width: 768px) {
+  .reservation h2 {
+    font-size: 40px;
+  }
+
+  .reservation p {
+    font-size: 18px;
+  }
+
+  .fonctionnement-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5%;
+  }
+
+  .fonctionnement-list li {
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .fonctionnement-list span {
+    left: -1rem;
+    
+  }
+  .restaurant-cards {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 7%;
+  }
+
+  .footer-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .footer-column ul{
+    display: flex;
+    gap: 20px;
+    order: 1;
+  }
+
+  .footer-column h1 {
+    order: 2;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+  .fonctionnement-list {
+    margin: 0 12%;
+  }
+
+  .fonctionnement h2 {
+    margin: 0 12%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+
+  .restaurants {
+    margin: 0 10%;
+  }
+
+  .restaurant-cards {
+    gap: 7%;
+  }
+
+}
+
+
 /*# sourceMappingURL=style.css.map */
