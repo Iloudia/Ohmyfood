@@ -81,9 +81,8 @@ header {
     padding: 15px;  
     margin-top: -50px; 
     position: relative;
-    overflow: hidden;  
+    overflow: hidden;
 }
-
 
 .restaurant-title {
     font-size: 2rem;
@@ -260,7 +259,78 @@ margin-right: 10px;
 font-size: 16px;
 }
 
-@media (max-width: 1024px) {
+@media screen and (min-width: 768px) {
+    .restaurant-title{
+        margin-top: 10%;
+    } 
+    
+    .restaurant-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+
+    .like-icon {
+        position: relative;
+        top: -10%;
+    }
+
+    .restaurant-section {
+        background-color: #fff;
+        position: relative;
+        overflow: visible;
+        border-radius: 0;
+        padding-bottom: 0;
+    }
+    .restaurant-content {
+        background-color: #f7f7f7;
+        border-radius: 40px 40px 0 0;
+        padding: 0 10%;  
+        margin: 0 5%;
+        margin-top: -50px;
+        
+    }
+        
+    .order-button {
+        margin-top: 10%;
+    }
+   
+
+    .footer-column {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    
+      .footer-column ul{
+        display: flex;
+        gap: 20px;
+        order: 1;
+      }
+    
+      .footer-column h1 {
+        order: 2;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+}
+
+@media screen and (min-width: 1024px) {
     
 
+    .restaurant-content {
+        background-color: #f7f7f7;
+        border-radius: 40px 40px 0 0;
+        padding:0 15%;  
+        margin: 0 10%;
+        margin-top: -50px;
+        
+    }
+
+   
+        
 }
