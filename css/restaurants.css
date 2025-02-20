@@ -145,21 +145,25 @@ header {
 }
 
 .menu-item-text {
-    text-align: left;
+   display: flex;
+   flex-direction: column;
+}
+
+.menu-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu-item-title {
     font-weight: bold;
     font-size: 1.2rem;
-    font-size: 18px;
-
 }
 
 .menu-item-subtitle {
     font-weight: lighter;
     font-size: 1rem;
     color: #000000;
-    font-size: 15px;
 }
 
 .menu-item .check {
@@ -191,6 +195,7 @@ header {
 
 .euro {
     margin-right: 15px;
+   
 }
 
 .menu-item-text .check i {
