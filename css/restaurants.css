@@ -1,9 +1,6 @@
 * {
     font-family: 'Roboto', sans-serif;
-
-
 }
-
 
 :root {
     --main-color: #9356DC;
@@ -11,36 +8,36 @@
     --filter-bg-color: #99E2D0;
 }
 
-.fa-solid {
-    color: var(--main-color);
-}
-
 body {
     background-color: rgb(247, 247, 247);
     justify-content: center;
     align-items: center;
     margin: 0;
-
 }
 
-
 /* Header */
-
-.title {
+.header__title {
     font-family: 'Shrikhand', sans-serif;
     display: flex;
     justify-content: center;
     font-size: 30px;
 }
 
-header {
+.header {
     background-color: #fff;
     padding: 1px;
     width: 100%;
     margin: 0;
 }
 
-/* restaurant section  */
+.header__arrow {
+    font-size: 100px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+  }
+
+/* Restaurant section */
 .restaurant-header {
     display: flex;
     justify-content: space-between;
@@ -48,19 +45,19 @@ header {
     font-size: 30px;
 }
 
-.restaurant-header .like-icon {
+.restaurant-header__like-icon {
     display: flex;
     padding: 10px;
     margin-right: 35px;
     font-size: 40px;
 }
 
-.restaurant-header .like-icon .fa-heart {
+.restaurant-header__like-icon .fa-heart {
     font-size: 30px;
     position: absolute;
 }
 
-.restaurant-header .like-icon .fa-solid {
+.restaurant-header__like-icon .fa-solid {
     opacity: 0;
     color: transparent;
     background-image: linear-gradient(to top, var(--main-color), var(--main-bg-color));
@@ -69,13 +66,13 @@ header {
     transition: opacity 0.5s ease-in-out;
 }
 
-.restaurant-header .like-icon .fa-solid:hover {
+.restaurant-header__like-icon .fa-solid:hover {
     opacity: 1;
 }
 
-.restaurant-image {
-    max-width: 100%;
-    height: auto;
+.restaurant__image {
+    width: 100%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -88,7 +85,7 @@ header {
     overflow: hidden;
 }
 
-.restaurant-title {
+.restaurant-header__title {
     font-size: 2rem;
     display: flex;
     font-weight: bold;
@@ -100,21 +97,20 @@ header {
     margin-top: 30px;
 }
 
-
 .menu-header {
     text-align: left;
     margin-bottom: 1rem;
-
 }
 
-.menu-title {
+.menu-header__title {
     font-size: 1.5rem;
     font-weight: lighter;
     font-size: 16px;
     text-transform: uppercase;
 }
 
-.menu-line {
+.menu-header__line {
+    display: inline-block;
     width: 40px;
     height: 3px;
     background-color: #99E2D0;
@@ -126,7 +122,6 @@ header {
     gap: 20px;
     margin-bottom: 50px;
 }
-
 
 .menu-item {
     color: #000000;
@@ -141,32 +136,31 @@ header {
     box-shadow: 0px 2px 15px rgb(210, 210, 210);
     position: relative;
     padding-right: 0;
-
 }
 
-.menu-item-text {
-   display: flex;
-   flex-direction: column;
+.menu-item__text {
+    display: flex;
+    flex-direction: column;
 }
 
-.menu-item-bottom {
+.menu-item__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu-item-title {
+.menu-item__title {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-.menu-item-subtitle {
+.menu-item__subtitle {
     font-weight: lighter;
     font-size: 1rem;
     color: #000000;
 }
 
-.menu-item .check {
+.menu-item__check {
     width: 0;
     background-color: var(--filter-bg-color);
     display: flex;
@@ -180,12 +174,12 @@ header {
     transition: 0.25s ease;
 }
 
-.menu-item .check i {
+.menu-item__check i {
     opacity: 0;
     transition: 0.25s ease;
 }
 
-.price-check {
+.menu-item__price-check {
     margin-right: 1%;
     transition: 0.25s ease;
     display: flex;
@@ -193,34 +187,24 @@ header {
     gap: 10px;
 }
 
-.euro {
+.menu-item__euro {
     margin-right: 15px;
-   
 }
 
-.menu-item-text .check i {
+.menu-item__text .menu-item__check i {
     color: white;
 }
 
-.menu-toggle:checked+.menu-item-text .check {
+.menu-item__toggle:checked + .menu-item__text .menu-item__check {
     width: 5%;
 }
 
-.menu-toggle:checked+.menu-item-text .price-check {
+.menu-item__toggle:checked + .menu-item__text .menu-item__price-check {
     margin-right: 6%;
 }
 
-.menu-toggle:checked+.menu-item-text .check i {
+.menu-item__toggle:checked + .menu-item__text .menu-item__check i {
     opacity: 1;
-}
-
-
-
-.menu-item-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
 }
 
 .order-button {
@@ -247,7 +231,6 @@ header {
 }
 
 /* Section footer */
-
 .footer {
     background-color: #353535;
     padding: 20px;
@@ -255,46 +238,46 @@ header {
     flex-direction: column;
 }
 
-.footer-column h1 {
+.footer__column h1 {
     font-family: 'Shrikhand', sans-serif;
     font-size: 18px;
     color: #fff;
     margin-bottom: 15px;
 }
 
-.footer-column ul {
+.footer__column ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-column li {
+.footer__column li {
     margin-bottom: 8px;
 }
 
-.footer-column a {
+.footer__column a {
     color: white;
     text-decoration: none;
 }
 
-.footer-column a:hover {
+.footer__column a:hover {
     text-decoration: underline;
 }
 
-.footer-column p {
+.footer__column p {
     color: white;
     margin-right: 20px;
     margin: 0;
 }
 
-.footer-column i {
+.footer__column i {
     color: #fff;
     margin-right: 10px;
     font-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .restaurant-title {
+    .restaurant-header__title {
         margin-top: 10%;
     }
 
@@ -306,8 +289,7 @@ header {
         text-align: center;
     }
 
-
-    .like-icon {
+    .restaurant-header__like-icon {
         position: relative;
         top: -10%;
     }
@@ -320,52 +302,43 @@ header {
         padding-bottom: 0;
     }
 
-    .restaurant-content {
+    .restaurant-section__content {
         background-color: #f7f7f7;
         border-radius: 40px 40px 0 0;
         padding: 0 10%;
         margin: 0 5%;
         margin-top: -50px;
-
     }
 
     .order-button {
         margin-top: 10%;
     }
 
-
-    .footer-column {
+    .footer__column {
         display: flex;
         align-items: center;
         justify-content: flex-end;
     }
 
-    .footer-column ul {
+    .footer__column ul {
         display: flex;
         gap: 20px;
         order: 1;
     }
 
-    .footer-column h1 {
+    .footer__column h1 {
         order: 2;
         margin-left: 50px;
         margin-right: 50px;
     }
-
 }
 
 @media screen and (min-width: 1024px) {
-
-
-    .restaurant-content {
+    .restaurant-section__content {
         background-color: #f7f7f7;
         border-radius: 40px 40px 0 0;
         padding: 0 15%;
         margin: 0 10%;
         margin-top: -50px;
-
     }
-
-
-
 }
