@@ -147,6 +147,10 @@ body {
   font-weight: lighter;
   font-size: 1rem;
   color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 20px;
 }
 .menu-item__check {
   width: 0;
@@ -198,7 +202,7 @@ body {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   border: none;
-  padding: 1rem;
+  padding: 1rem 3rem;
   border-radius: 2rem;
   border: none;
   box-shadow: 4px 2px 8px black;
@@ -296,15 +300,6 @@ body {
     order: 2;
     margin-left: 50px;
     margin-right: 50px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .restaurant-section__content {
-    background-color: #f7f7f7;
-    border-radius: 40px 40px 0 0;
-    padding: 0 15%;
-    margin: 0 10%;
-    margin-top: -50px;
   }
 }
 /*# sourceMappingURL=restaurant.css.map */

@@ -98,6 +98,21 @@ body {
 .fonctionnement__title {
   text-align: left;
   font-size: 18px;
+  margin-bottom: 30px;
+}
+.fonctionnement__number {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  left: -4rem;
+  border: 1px solid #9356DC;
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 0.3rem 0.6rem;
+}
+.fonctionnement__texte {
+  font-size: 14px;
+  flex-wrap: nowrap;
 }
 .fonctionnement__list {
   display: flex;
@@ -115,21 +130,13 @@ body {
   font-size: 16px;
   margin-bottom: 50px;
   list-style: none;
-}
-.fonctionnement__list span {
   position: relative;
-  color: #fff;
-  font-weight: bold;
-  left: -4rem;
-  border: 1px solid #9356DC;
-  border-radius: 50%;
-  background-color: #9356DC;
-  padding: 0.3rem 0.6rem;
 }
 .fonctionnement__list i {
   color: grey;
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 19px;
+  left: 0;
 }
 .fonctionnement__list .fa-store {
   color: #9356DC;
@@ -300,24 +307,92 @@ body {
     margin-right: 50px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
+  .fonctionnement {
+    padding: 1% 5%;
+    text-align: center;
+  }
+  .fonctionnement__texte {
+    white-space: nowrap;
+    font-size: 11px;
+  }
   .fonctionnement__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5%;
+    position: relative;
+  }
+  li {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 60px;
+  }
+  .fonctionnement__number {
+    position: absolute;
+    left: -10px;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .reservation__content h2 {
+    font-size: 40px;
+  }
+  .reservation__content p {
+    font-size: 18px;
+  }
+  .fonctionnement {
+    padding: 1% 5%;
+    text-align: center;
+  }
+  .fonctionnement__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement__number {
+    position: absolute;
+  }
+  .fonctionnement li {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1025px) {
   .fonctionnement {
-    padding: 1% 3%;
+    padding: 1% 5%;
+    text-align: center;
   }
   .fonctionnement__title {
     padding-bottom: 20px;
+    font-size: 26px;
   }
   .fonctionnement__list {
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fonctionnement__number {
+    position: absolute;
+  }
+  .fonctionnement__texte {
+    font-size: 15px;
+  }
+  .fonctionnement li {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .restaurants {
+    width: 91%;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

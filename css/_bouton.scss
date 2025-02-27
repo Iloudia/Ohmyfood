@@ -1,0 +1,22 @@
+.order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        background: linear-gradient(to top, #9356DC, #FF79DA);
+        color: white;
+        border: none;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+        border: none;
+        box-shadow: 4px 2px 8px black;
+        font-size: 16px;
+        margin-bottom: 50px;
+        transition: var(--filter-bg-color) 1.9s ease;
+    }
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
