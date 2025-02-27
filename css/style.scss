@@ -1,4 +1,72 @@
-@use 'general';
+@import 'general';
+
+
+@-webkit-keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fadeOut 5s forwards;
+  animation: fadeOut 5s forwards;
+  z-index: 9999;
+
+
+  &__loader {
+    width: 120px;
+    height: 120px;
+    border: 8px solid #fff;
+    border-top: 8px solid $primary-color;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+  }
+
+
+  &__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    -webkit-animation: blink 1.5s infinite;
+    animation: blink 1.5s infinite;
+  }
+}
+
 
 // Header
 .header {
@@ -352,8 +420,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; 
-    padding-left: 60px;
   }
 
   .fonctionnement__number {
