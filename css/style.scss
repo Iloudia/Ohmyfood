@@ -1,74 +1,8 @@
 @import 'general';
+@import 'animations';
 
 
-@-webkit-keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-@-webkit-keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-
-.loading-screen {
-  position: fixed;
-  inset: 0;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: fadeOut 5s forwards;
-  animation: fadeOut 5s forwards;
-  z-index: 9999;
-
-
-  &__loader {
-    width: 120px;
-    height: 120px;
-    border: 8px solid #fff;
-    border-top: 8px solid $primary-color;
-    border-radius: 50%;
-    -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
-  }
-
-
-  &__text {
-    font-family: "Roboto", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: #000;
-    -webkit-animation: blink 1.5s infinite;
-    animation: blink 1.5s infinite;
-  }
-}
-
-
-// Header
+/* header */
 .header {
   background-color: #fff;
   padding: 0.3rem;
@@ -83,7 +17,7 @@
   }
 }
 
-// Info ville
+/* City info */
 .city__info {
   display: flex;
   justify-content: center;
@@ -119,7 +53,7 @@
   }
 }
 
-// Réservation
+/* Reservation */
 .reservation {
   display: flex;
   flex-direction: column;
@@ -138,7 +72,7 @@
   @import 'bouton';
 }
 
-// Fonctionnement
+/* Fonctionnement */
 
 .fonctionnement {
   background-color: #fff;
@@ -167,7 +101,6 @@
       flex-wrap: nowrap;
     }
 
-
   &__list {
     display: flex;
     justify-content: center;
@@ -186,11 +119,8 @@
       margin-bottom: 50px;
       list-style: none;
       position: relative;
-      
-      
+          
     }
-
-  
 
     i {
       color: grey;
@@ -205,7 +135,8 @@
   }
 }
 
-// Restaurants
+/* Restaurants*/
+
 .restaurants {
   padding: 0 30px 50px 30px;
   margin-top: 70px;
@@ -308,7 +239,7 @@
   }
 }
 
-// Footer
+/* footer */
 .footer {
   background-color: $dark-grey;
   padding: 20px;
@@ -350,7 +281,7 @@
   }
 }
 
-// Media Queries
+
 @media screen and (min-width: 768px) {
   .reservation__content {
     h2 { font-size: 40px; }
@@ -406,7 +337,6 @@
 
   .fonctionnement__texte {
     white-space: nowrap;
-    font-size: 11px;
   }
 
   .fonctionnement__list {
@@ -425,9 +355,10 @@
   .fonctionnement__number {
     position: absolute;
     left: -10px;
-    transform: translateY(-50%);
-    z-index: 2;
   }
+  a {
+    text-decoration: none;
+}
 }
 @media screen and (min-width: 768px) and (max-width:1024px) {
 
@@ -496,5 +427,8 @@
 
  
   }
+  a {
+    text-decoration: none;
+}
 }
 

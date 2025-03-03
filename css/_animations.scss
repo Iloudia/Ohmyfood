@@ -1,54 +1,55 @@
 @keyframes spin {
-    0% {
+  0% {
       transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
   }
-  
-  @keyframes fadeOut {
-    0% {
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
       opacity: 1;
-    }
-  
-    80% {
+  }
+
+  80% {
       opacity: 1;
-    }
-  
-    100% {
+  }
+
+  100% {
       opacity: 0;
       visibility: hidden;
-    }
   }
-  
-.loader {
-    width: 120px;
-    height: 120px;
-    border: 8px solid #fff;
-    border-top: 8px solid var(--main-color);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+}
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 5s forwards;
+  z-index: 9999;
+
+  &__loader {
+      width: 120px;
+      height: 120px;
+      border: 8px solid #fff;
+      border-top: 8px solid #9356DC;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
   }
-  
-  .loading-screen {
-    position: fixed;
-    inset: 0;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: fadeOut 5s forwards;
-    z-index: 9999;
+
+  &__text {
+      font-family: "Roboto", sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: #000;
+      animation: blink 1.5s infinite;
   }
-  
-  .loading-text {
-    font-family: "Roboto", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: #000;
-    animation: blink 1.5s infinite;
-  }
-  
+}
+
+

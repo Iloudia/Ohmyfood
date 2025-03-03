@@ -9,6 +9,54 @@ body {
   margin: 0;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 5s forwards;
+  z-index: 9999;
+}
+.loading-screen__loader {
+  width: 120px;
+  height: 120px;
+  border: 8px solid #fff;
+  border-top: 8px solid #9356DC;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.loading-screen__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+  animation: blink 1.5s infinite;
+}
+
+/* header */
 .header {
   background-color: #fff;
   padding: 0.3rem;
@@ -22,6 +70,7 @@ body {
   font-size: 30px;
 }
 
+/* City info */
 .city__info {
   display: flex;
   justify-content: center;
@@ -60,6 +109,7 @@ body {
   opacity: 0.7;
 }
 
+/* Reservation */
 .reservation {
   display: flex;
   flex-direction: column;
@@ -75,22 +125,29 @@ body {
   font-weight: lighter;
   margin-bottom: 30px;
 }
-.reservation__button button {
+.reservation .order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reservation .order-button button {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   border: none;
-  padding: 1rem;
+  padding: 1rem 3rem;
   border-radius: 2rem;
+  border: none;
   box-shadow: 4px 2px 8px black;
   font-size: 16px;
   margin-bottom: 50px;
-  transition: filter 0.3s ease;
+  transition: var(--filter-bg-color) 1.9s ease;
+  text-decoration: none;
 }
-.reservation__button button:hover {
+.reservation .order-button:hover {
   filter: brightness(1.1);
-  background-color: rgba(147, 86, 220, 0.1);
 }
 
+/* Fonctionnement */
 .fonctionnement {
   background-color: #fff;
   padding: 20px;
@@ -142,6 +199,7 @@ body {
   color: #9356DC;
 }
 
+/* Restaurants*/
 .restaurants {
   padding: 0 30px 50px 30px;
   margin-top: 70px;
@@ -231,8 +289,9 @@ body {
   opacity: 1;
 }
 
+/* footer */
 .footer {
-  background-color: #353535;
+  background-color: #333;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -314,27 +373,24 @@ body {
   }
   .fonctionnement__texte {
     white-space: nowrap;
-    font-size: 11px;
   }
   .fonctionnement__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
   }
   li {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding-left: 60px;
   }
   .fonctionnement__number {
     position: absolute;
     left: -10px;
-    transform: translateY(-50%);
-    z-index: 2;
+  }
+  a {
+    text-decoration: none;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -394,5 +450,7 @@ body {
     width: 91%;
     margin: 0 auto;
   }
-}
-/*# sourceMappingURL=style.css.map */
+  a {
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=style.css.map */
