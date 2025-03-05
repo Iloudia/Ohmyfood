@@ -140,18 +140,16 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0;
-}
-.menu-item__text h3 {
-  margin: 0;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu-item__content {
   padding: 15px 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block;
+  flex-direction: column;
+  gap: 5px;
 }
 .menu-item__bottom {
   display: flex;
@@ -167,6 +165,11 @@ body {
   font-size: 1rem;
   color: #000000;
   margin-right: 20px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-direction: column;
 }
 .menu-item__check {
   width: 0;
@@ -244,7 +247,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.order-button button {
+.order-button p {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   border: none;
@@ -254,7 +257,7 @@ body {
   box-shadow: 4px 2px 8px black;
   font-size: 16px;
   margin-bottom: 50px;
-  transition: var(--filter-bg-color) 1.9s ease;
+  transition: filter 1.9s ease;
   text-decoration: none;
 }
 .order-button:hover {
@@ -306,17 +309,10 @@ body {
     font-size: 25px;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1440px) {
-  .restaurant-header {
-    display: flex;
-    align-items: center;
-  }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .restaurant-header__title {
     font-size: 2rem;
     max-width: 70%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .restaurant-header__like-icon {
     display: flex;
@@ -324,8 +320,6 @@ body {
     justify-content: center;
     font-size: 40px;
   }
-}
-@media screen and (min-width: 768px) {
   .restaurant-section {
     background-color: #fff;
     position: relative;
