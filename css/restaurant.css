@@ -109,6 +109,7 @@ body {
   font-weight: lighter;
   font-size: 16px;
   text-transform: uppercase;
+  margin: 0;
 }
 .menu-header__line {
   display: inline-block;
