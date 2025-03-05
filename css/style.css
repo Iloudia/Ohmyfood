@@ -295,6 +295,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .footer__column h1 {
   font-family: "Shrikhand", sans-serif;
@@ -379,7 +380,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  li {
+  .fonctionnement li {
     width: 50%;
     display: flex;
     align-items: center;
@@ -391,6 +392,10 @@ body {
   }
   a {
     text-decoration: none;
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -417,6 +422,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .footer {
+    display: flex;
+    align-items: flex-end;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -452,5 +461,9 @@ body {
   }
   a {
     text-decoration: none;
+  }
+  .footer {
+    display: flex;
+    align-items: flex-end;
   }
 }/*# sourceMappingURL=style.css.map */
